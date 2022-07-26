@@ -1,11 +1,14 @@
 import express, { Request, Response, NextFunction, RequestHandler } from 'express';
 import { ServerError } from '../types';
+import path from 'path';
 
 
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
+app.use(express.static(path.resolve(__dirname, '../client')));
 
 
 app.use('/', (err: ServerError, req: Request, res: Response, next: NextFunction) => {
