@@ -2,11 +2,12 @@
   "name": "coeus-god-of-queries",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./client/index.js",
+  "type": "module",
   "scripts": {
-    "start": "NODE_ENV=production node server/server.js",
+    "start": "NODE_ENV=production ts-node server/server.ts",
     "build": "NODE_ENV=production webpack",
-    "dev": "concurrently \"NODE_ENV=development webpack serve --open\" \"nodemon server/server.js\"",
+    "dev": "concurrently \"NODE_ENV=development webpack serve --open\" \"nodemon server/server.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,7 @@
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
     "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
     "@types/jest": "^28.1.6",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
@@ -42,8 +44,8 @@
     "jest": "^28.1.3",
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.19",
-    "react": "^18.3.0-next-2c7dea736-20220726",
-    "react-dom": "^18.3.0-next-2c7dea736-20220726",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "ts-jest": "^28.0.7",
@@ -56,6 +58,7 @@
     "@reduxjs/toolkit": "^1.8.3",
     "express": "^4.18.1",
     "react-redux": "^8.0.2",
+    "ts-loader": "^9.3.1",
     "webpack": "^5.74.0"
   }
 }
