@@ -22,6 +22,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "@typescript-eslint/no-var-requires": "false",
         "indent": ["warn", 2, {
             "ignoreComments": false,
             "SwitchCase": 1,
