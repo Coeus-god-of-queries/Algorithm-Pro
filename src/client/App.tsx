@@ -5,7 +5,7 @@ import Home from './Components/Home';
 const App = () => {
   return (
     <div>
-      <h1>Tic Tac Toe</h1>
+      <h1>Coeus</h1>
       <Home/>
     </div>
   );
