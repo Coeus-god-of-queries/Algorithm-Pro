@@ -22,7 +22,8 @@ const Login = (): JSX.Element => {
     })
     .then((response) => {
       console.log(response);
-      navigate('/home', { state: data.data });
+      //navigate('/home', { state: data.data });
+      navigate('/home', { state: response.data });
     })
     .catch((error) => {
       console.log(error);
