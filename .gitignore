@@ -1,0 +1,7 @@
+build
+npm-debug.log
+.DS_Store
+.env
+node_modules
+package-lock
+coverage

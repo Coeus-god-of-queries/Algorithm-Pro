@@ -1,0 +1,78 @@
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 0 2.5%;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+#app {
+  text-align: center;
+}
+
+.problem-cards{
+  display: flex;
+  width:auto;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  border: solid 1px rgb(219, 218, 218);
+  border-radius: 5px;
+  padding: .5em;
+  margin: .5em;
+  
+}
+
+.problem-title{
+  color: white !important;
+  height: 50px;
+  width: 25% !important;
+  /* max-width: 30%!important; */
+  border: solid 1px #333;
+  border-radius: 5px;
+  background-color: rgb(14, 93, 93) !important;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ 
+}
+
+.description{
+  height: 50px;
+  width: 65%;
+  /* max-width: 70%; */
+  /* border: solid 1px #333; */
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 2px;
+  background-color: rgb(155, 188, 188);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ 
+}
+
+.searchButton{
+  height: 50px !important;
+  width: 100px !important;
+  border: solid 1px rgb(233, 230, 230) !important;
+  color:#333 !important;
+}
+
+.title-container{
+  display:flex;
+  align-items: center;
+  justify-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
