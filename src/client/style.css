@@ -15,3 +15,39 @@ body {
 #app {
   text-align: center;
 }
+
+.problem-cards{
+  display: flex;
+  width:auto;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  border: solid 1px rgb(219, 218, 218);
+  border-radius: 5px;
+  padding: .5em;
+  margin: .5em;
+  
+}
+
+.problem-title{
+  color: white !important;
+  height: 50px;
+  min-width: 20% !important;
+  max-width: 30%!important;
+  border: solid 1px #333;
+  border-radius: 5px;
+  background-color: rgb(14, 93, 93) !important;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ 
+}
+
+.description{
+  height: 50px;
+  min-width: 60%;
+  max-width: 70%;
+  /* border: solid 1px #333; */
+  border-radius: 2px;
+  background-color: rgb(155, 188, 188);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ 
+}
