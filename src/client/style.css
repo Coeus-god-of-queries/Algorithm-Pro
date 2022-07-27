@@ -32,8 +32,8 @@ body {
 .problem-title{
   color: white !important;
   height: 50px;
-  min-width: 20% !important;
-  max-width: 30%!important;
+  width: 25% !important;
+  /* max-width: 30%!important; */
   border: solid 1px #333;
   border-radius: 5px;
   background-color: rgb(14, 93, 93) !important;
@@ -43,9 +43,13 @@ body {
 
 .description{
   height: 50px;
-  min-width: 60%;
-  max-width: 70%;
+  width: 65%;
+  /* max-width: 70%; */
   /* border: solid 1px #333; */
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
   border-radius: 2px;
   background-color: rgb(155, 188, 188);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -57,4 +61,18 @@ body {
   width: 100px !important;
   border: solid 1px rgb(233, 230, 230) !important;
   color:#333 !important;
+}
+
+.title-container{
+  display:flex;
+  align-items: center;
+  justify-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
