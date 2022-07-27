@@ -12,3 +12,9 @@ export type ServerError = {
   status: number,
   message: {err: string}
 }
+
+export interface UserController {
+  createUser: (req : Request, res: Response, next: NextFunction) => void,
+  verifyUser: (req : Request, res: Response, next: NextFunction) => void,
+  // userProblems: (req : Request, res: Response, next: NextFunction) => void,
+}
