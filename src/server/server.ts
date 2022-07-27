@@ -41,4 +41,6 @@ app.use('/', (err: ServerError, req: Request, res: Response, next: NextFunction)
   return res.status(errorObj.status).json(errorObj.message);
 })
 
-app.listen(3000, () => console.log('server is listening on port 3000'));
+// app.listen(3000, () => console.log('server is listening on port 3000'));
+
+export default app;
