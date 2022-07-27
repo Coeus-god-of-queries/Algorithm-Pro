@@ -7,8 +7,8 @@
     "start": "webpack-dev-server",
     "dev": "nodemon ./src/server/index.ts",
     "test": "jest",
-    "test-backend-login": "jest ./__tests__/backend-login-test.tsx"
-
+    "test-backend-login": "jest ./__tests__/backend-login-test.tsx",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
