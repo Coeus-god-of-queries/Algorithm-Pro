@@ -4,9 +4,9 @@ import CanvasDraw from "react-canvas-draw";
 
 
 interface whiteboardProps {
-    user: {};
-    question: string;
-    description: string;     
+    user?: {};
+    question?: string;
+    description?: string;     
 }
 
 export const Whiteboard = (props: whiteboardProps): JSX.Element => {
