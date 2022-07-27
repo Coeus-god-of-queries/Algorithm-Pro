@@ -18,3 +18,8 @@ export interface UserController {
   verifyUser: (req : Request, res: Response, next: NextFunction) => void,
   // userProblems: (req : Request, res: Response, next: NextFunction) => void,
 }
+
+export interface ProblemController {
+  getAllProblem: (req : Request, res: Response, next: NextFunction) => void,
+  getOneProblem: (req : Request, res: Response, next: NextFunction) => void,
+}
