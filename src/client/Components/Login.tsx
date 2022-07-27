@@ -26,20 +26,31 @@ const Login = (): JSX.Element => {
     //user: admin
     //pass: 123456
 
-    axios({
-      method: 'post',
-      url: '/login',
-      data: {
-      username: usernameInput,
-      password: passwordInput
-      }
+    // axios({
+    //   method: 'post',
+    //   url: '/login',
+    //   data: {
+    //   username: usernameInput,
+    //   password: passwordInput
+    //   }
+    // })
+    // .then((response) => {
+    //   console.log(response);
+    //   navigate('/home', { state: { response: response.data, isLoggedIn: true } });
+    // })
+    // .catch((error) => {
+    //   console.log('axios error:', error);
+    // });
+
+    axios.post('/login', {
+      username: 'Fred',
+      password: 'Flintstone'
     })
-    .then((response) => {
+    .then(function (response) {
       console.log(response);
-      navigate('/home', { state: { response: response.data, isLoggedIn: true } });
     })
-    .catch((error) => {
-      console.log('axios error:', error);
+    .catch(function (error) {
+      console.log(error);
     });
 
     //reset input fields
