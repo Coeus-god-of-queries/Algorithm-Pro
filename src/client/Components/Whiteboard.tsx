@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect,useState} from 'react';
 import CodeEditor from '@uiw/react-textarea-code-editor';
 import { WhiteboardCanvas } from './WhiteboardCanvas';
+import { useLocation } from 'react-router-dom';
 
 
 export interface whiteboardProps {
@@ -10,9 +11,16 @@ export interface whiteboardProps {
 }
 
 export const Whiteboard = (props: whiteboardProps): JSX.Element => {
-    const [code, setCode] = React.useState(
+  let location:any= useLocation();
+
+
+    const [code, setCode] = useState<any>(
         `function add(a, b) {\n  return a + b;\n}`
       );    
+      useEffect(() => {
+        console.log(location.state)
+        setCode(location.state.about)
+      }, [location]);
     return (
         <div style={{display: "block", height: "10em"}}>
         {/* navbar component */}

@@ -26,32 +26,32 @@ const Login = (): JSX.Element => {
     //user: admin
     //pass: 123456
 
-    // axios({
-    //   method: 'post',
-    //   url: '/login',
-    //   data: {
-    //   username: usernameInput,
-    //   password: passwordInput
-    //   }
-    // })
-    // .then((response) => {
-    //   console.log(response);
-    //   navigate('/home', { state: { response: response.data, isLoggedIn: true } });
-    // })
-    // .catch((error) => {
-    //   console.log('axios error:', error);
-    // });
-
-    axios.post('/login', {
-      username: 'Fred',
-      password: 'Flintstone'
+    axios({
+      method: 'post',
+      url: '/login',
+      data: {
+      username: usernameInput,
+      password: passwordInput
+      }
     })
-    .then(function (response) {
+    .then((response) => {
       console.log(response);
+      navigate('/home', { state: { response: response.data, isLoggedIn: true } });
     })
-    .catch(function (error) {
-      console.log(error);
+    .catch((error) => {
+      console.log('axios error:', error);
     });
+
+    // axios.post('/login', {
+    //   username: inputRef,
+    //   password: 'Flintstone'
+    // })
+    // .then(function (response) {
+    //   console.log(response);
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
 
     //reset input fields
     if (username.current !== null && password.current !== null) {
@@ -66,7 +66,7 @@ const Login = (): JSX.Element => {
 
   const paperStyle = {
     padding: 20,
-    height: '38vh',
+    // height: '38vh',
     width: 500,
     margin: '10% auto',
   };
