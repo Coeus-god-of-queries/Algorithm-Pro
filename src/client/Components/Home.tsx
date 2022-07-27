@@ -74,7 +74,6 @@ const search = () =>{
 
 return(
     <>
-    <Navbar/>
     <div className="home-container">
         <div className='title-container'>
         <h1 className="home-title">Whiteboard with Jigglypuff</h1>
