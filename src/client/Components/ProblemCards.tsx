@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Stack} from '@mui/material';
-// import Stack from '@mui/material/Stack';
+import { useNavigate } from 'react-router-dom';
 
 export interface ProblemCard {
     title?: any,
@@ -9,9 +9,11 @@ export interface ProblemCard {
   
   
   const ProblemCards = ({title,about}:ProblemCard): JSX.Element =>{
+    const navigate = useNavigate();
   
     const openProblem = () => {
       console.log("clicked",title)
+      navigate('/whiteboard', { state:{ title:title, about:about} })
 
     }
 

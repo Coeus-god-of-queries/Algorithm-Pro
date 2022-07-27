@@ -3,6 +3,9 @@ import Login from './Login';
 import ProblemCards, { ProblemCard } from './ProblemCards'
 import axios from 'axios'
 import ProblemContainer from './ProblemContainer';
+import SearchBar from './SearchBar';
+import {Button, Stack, Box, TextField} from '@mui/material';
+
 
 interface Home {
   test?: string
@@ -12,7 +15,8 @@ interface Home {
 const Home = ({test}:Home): JSX.Element => {
   const [problem, setProblems] = useState<any[]>([])
   const [cards, setCards] = useState()
-  
+  const [inputValue, setInputValue] = useState('')
+
   useEffect(() => {
     // const testSet:any = [{title:"tester",about:"is this hard?"},{title:"tester2",about:"or easy?"}]
     setProblems([{title:"tester",about:"a very hard problem"},{title:"tester2",about:"an even harder one"}])
@@ -21,14 +25,32 @@ const Home = ({test}:Home): JSX.Element => {
   
   } ,[])
 
-  //fetch list of problems 
+  //fetch list of all problems 
   const getProblems =() =>{
     axios({
       method: "get",
-      url: "/home/problems",
-    }).then(data => {
+      url: "/problem",
+    }).then((data) => {
       console.log(data)
+      makeCards(data)
     })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+
+  const searchProblems =(inputValue:string) =>{
+    console.log(inputValue)
+    axios({
+      method: "get",
+      url: `/problem/${inputValue}`,
+    }).then((data) => {
+      console.log(data)
+      makeCards(data)
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }
 
   const makeCards = (problem?:any) => {
@@ -45,12 +67,21 @@ const Home = ({test}:Home): JSX.Element => {
     makeCards(problem)
   },[problem])
   
-
+const search = () =>{
+        console.log('search clicked', inputValue)
+        searchProblems(inputValue)
+    }
 
 
 return(
     <>
         <div>Problems</div>
+        <Box
+        component="form"
+        sx={{'& > :not(style)': { m: 1, width: '25ch' },}} noValidate autoComplete="off" >
+        <TextField type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} className="searchBar" id="outlined-basic" label="Problem Name..." variant="outlined" />
+        <Button className="searchButton" onClick={search}>Search</Button>
+        </Box>
         <ProblemContainer cards={cards}/>
         {/* <Login /> */}
     </>
