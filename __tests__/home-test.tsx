@@ -10,10 +10,17 @@ render(
     <Home test={text}/>
     )
     const rendered = screen.getByText(text)
+    expect(screen.getAllByText).toBeDefined()
     // expect(rendered).toEqual(text)
+<<<<<<< HEAD
+    // expect("howdy").toBeInTheDocument();
+    // const tester = render(<Home test={text}/>);
+    //   expect(getByText("howdy")).toBeInTheDocument();
+=======
     expect("howdy")//.toBeInTheDocument();
 // const { getByText } = render(<Home test={text}/>);
 //   expect(getByText("howdy")).toBeInTheDocument();
+>>>>>>> dev
 })
 //test search functionality
 //expect list of problems to render
