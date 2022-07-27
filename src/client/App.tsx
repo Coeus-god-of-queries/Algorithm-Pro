@@ -1,11 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Home from './Components/Home';
-<<<<<<< HEAD
-import "./style.css"
-=======
 import Login from './Components/Login';
->>>>>>> dev
 
 const App = () => {
   return (

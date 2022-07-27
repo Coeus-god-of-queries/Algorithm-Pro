@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = (): JSX.Element => {
   const username = useRef<HTMLInputElement>(null);
   const password = useRef<HTMLInputElement>(null);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   
   
   //
@@ -22,7 +22,7 @@ const Login = (): JSX.Element => {
     })
     .then((response) => {
       console.log(response);
-      navigate('/home', { state: data.data });
+      // navigate('/home', { state: data.data });
     })
     .catch((error) => {
       console.log(error);
