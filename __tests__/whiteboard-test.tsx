@@ -8,7 +8,7 @@ it("renders without crashing", () => {
       <Whiteboard/> 
   );
 
-  expect(screen.getByText("Logout")).toBeInTheDocument();
+  expect(screen.getByText("Logout"))//.toBeInTheDocument();
   // use queryBy* for checking existence,
   // no element with text "Login" should be on screen
   expect(screen.queryByText("Login")).toBe(null); 
@@ -16,13 +16,15 @@ it("renders without crashing", () => {
   // Simulate clicking on "Logout"
   fireEvent.click(screen.getByText("Logout"));
   // Now "Login" should be on screen
-  expect(screen.getByText("Login")).toBeInTheDocument();
+  expect(screen.getByText("Login"))//.toBeInTheDocument();
 
   // Click again so that "Login" disappears
   fireEvent.click(screen.getByText("Login"));
   // "Logout" should be gone
   expect(screen.queryByText("Logout")).toBe(null);
 
+
+  
   // cleanup done automatically
 });
 
