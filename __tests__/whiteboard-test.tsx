@@ -1,11 +1,11 @@
 import React from "react";
-import  Whiteboard from "../src/client/Components/Whiteboard";
+import  { Whiteboard } from "../src/client/Components/Whiteboard";
 import { render, screen, fireEvent } from "@testing-library/react";
 import '@testing-library/jest-dom';
 
 it("renders without crashing", () => {
   render(
-      Whiteboard() 
+      <Whiteboard/> 
   );
 
   expect(screen.getByText("Logout")).toBeInTheDocument();
@@ -26,6 +26,4 @@ it("renders without crashing", () => {
   // cleanup done automatically
 });
 
-function Whiteboard(): React.ReactElement<any, string | React.JSXElementConstructor<any>> {
-  throw new Error("Function not implemented.");
-}
+

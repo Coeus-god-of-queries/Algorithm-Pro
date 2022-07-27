@@ -1,24 +1,51 @@
+import axios from 'axios';
 import React, { useState, useRef, useEffect } from 'react';
 
 const Login = (): JSX.Element => {
   const username = useRef<HTMLInputElement>(null); //how to get around forbidden null assertions
   const password = useRef<HTMLInputElement>(null);
   
-  const handleLogin = (e : React.MouseEvent<HTMLButtonElement>) : void => {
-    const user = username.current?.value;
-    const pass = password.current?.value;
+  const handleLogin = (e:React.MouseEvent<HTMLButtonElement>) : void => {
+    const usernameInput = username.current?.value;
+    const passwordInput = password.current?.value;
 
-    //make a post fetch request with user + pass sent as body
-    //dispatch an action once logged in
+
+    //user: admin
+    //pass: 123456
+    axios.post('/user', {
+      username: usernameInput,
+      password: passwordInput
+    })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
   };
+
+  const handleSignup = (e:React.MouseEvent<HTMLButtonElement>): void => {
+    //to be created
+  }
 
   //testing user object that's being returned and its state
   return( 
-    <>
-      <input ref={username}></input>
-      <input ref={password}></input>
-      <button onClick={(e) => handleLogin(e)}></button>
-    </>
+    <div id='login-container'>
+    navbar or just title here
+    <br />
+    Login
+      <div id='login-field-container'>
+        <input id='username-field' placeholder='Username' ref={username}></input>
+        <input id='password-field' placeholder='Password' ref={password}></input>
+      </div>
+      
+      <div id='login-button-container'>
+        <button onClick={(e) => handleSignup(e)}>Sign Up</button>
+        <button onClick={(e) => handleLogin(e)}>Login</button>
+      </div>
+
+    </div>
   );
 };
 
