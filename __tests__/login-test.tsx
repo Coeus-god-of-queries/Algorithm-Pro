@@ -5,7 +5,6 @@ import { render, screen, fireEvent } from '@testing-library/react';
 describe('Login', () => {
     beforeEach(() => {
         render(<Login />)
-
     })
 
 
