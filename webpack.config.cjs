@@ -41,7 +41,7 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
     proxy: {
-      '/api': 'http://localhost:3000',
+      '/login': 'http://localhost:3000/',
       secure: false
     }
   },
