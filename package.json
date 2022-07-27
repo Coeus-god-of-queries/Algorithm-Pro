@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "dev": "nodemon ./src/server/index.ts",
     "test": "jest",
-    "test-backend-login": "jest ./__tests__/backend-login-test.tsx",
+    "test-backend-login": "jest ./__tests__/backend-login-test.tsx --no-cache  --detectOpenHandles --runInBand --forceExit",
     "build": "webpack"
   },
   "repository": {
@@ -34,6 +34,7 @@
     "@types/react": "^17.0.38",
     "@types/react-canvas-draw": "^1.2.0",
     "@types/react-dom": "^17.0.11",
+    "@types/supertest": "^2.0.12",
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^10.2.0",
     "css-loader": "^6.7.1",
