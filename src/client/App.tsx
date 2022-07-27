@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import "./style.css"
 import Login from './Components/Login';
 import { Link, BrowserRouter, Routes, Route} from "react-router-dom";
+import { Whiteboard } from './Components/Whiteboard';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Login />}/>
         <Route path="/home" element={<Home />}/>
+        <Route path="/whiteboard" element={<Whiteboard/>}/>
       </Routes>
     </div>
     </BrowserRouter>
