@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1658881450706" clover="3.2.0">
-  <project timestamp="1658881450706" name="All files">
-    <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1" elements="9" coveredelements="5" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
-    <file name="Home.tsx" path="/Users/anthonyking/Coeus-god-of-queries/src/client/Components/Home.tsx">
-      <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-      <line num="11" count="1" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="16" count="0" type="stmt"/>
+<coverage generated="1658884786503" clover="3.2.0">
+  <project timestamp="1658884786503" name="All files">
+    <metrics statements="16" coveredstatements="13" conditionals="4" coveredconditionals="3" methods="7" coveredmethods="3" elements="27" coveredelements="19" complexity="0" loc="16" ncloc="16" packages="1" files="1" classes="1"/>
+    <file name="Login.tsx" path="/Users/anthonyking/Coeus-god-of-queries/src/client/Components/Login.tsx">
+      <metrics statements="16" coveredstatements="13" conditionals="4" coveredconditionals="3" methods="7" coveredmethods="3"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="4" type="stmt"/>
+      <line num="6" count="4" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="15" count="2" type="stmt"/>
       <line num="20" count="0" type="stmt"/>
-      <line num="28" count="1" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="27" count="2" type="cond" truecount="3" falsecount="1"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="33" count="4" type="stmt"/>
+      <line num="38" count="4" type="stmt"/>
+      <line num="50" count="0" type="stmt"/>
+      <line num="51" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>

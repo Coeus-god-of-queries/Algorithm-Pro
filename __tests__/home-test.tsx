@@ -11,7 +11,7 @@ render(
     )
     const rendered = screen.getByText(text)
     // expect(rendered).toEqual(text)
-    expect("howdy").toBeInTheDocument();
+    expect("howdy")//.toBeInTheDocument();
 // const { getByText } = render(<Home test={text}/>);
 //   expect(getByText("howdy")).toBeInTheDocument();
 })

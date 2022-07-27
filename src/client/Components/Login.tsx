@@ -12,7 +12,7 @@ const Login = (): JSX.Element => {
 
     //user: admin
     //pass: 123456
-    axios.post('/user', {
+    axios.post('/login', {
       username: usernameInput,
       password: passwordInput
     })
@@ -23,6 +23,11 @@ const Login = (): JSX.Element => {
       console.log(error);
     });
 
+    //reset input fields
+    if (username.current !== null && password.current !== null) {
+    username.current.value = '';
+    password.current.value = '';
+    }
   };
 
   const handleSignup = (e:React.MouseEvent<HTMLButtonElement>): void => {
@@ -31,13 +36,14 @@ const Login = (): JSX.Element => {
 
   //testing user object that's being returned and its state
   return( 
+
     <div id='login-container'>
-    navbar or just title here
-    <br />
-    Login
+      navbar or just title here
+      <br />
+      
       <div id='login-field-container'>
         <input id='username-field' placeholder='Username' ref={username}></input>
-        <input id='password-field' placeholder='Password' ref={password}></input>
+        <input id='password-field' type='password' placeholder='Password' ref={password}></input>
       </div>
       
       <div id='login-button-container'>
