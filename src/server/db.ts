@@ -7,7 +7,7 @@ const pool = new pg.Pool({
 });
 
 const db = {
-  query: (text: string, params: string[]) => {
+  query: (text: string, params?: string[]) => {
       return pool.query(text, params);
   }
 }
