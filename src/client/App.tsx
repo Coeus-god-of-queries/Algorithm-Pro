@@ -5,12 +5,13 @@ import "./style.css"
 import Login from './Components/Login';
 import { Link, BrowserRouter, Routes, Route} from "react-router-dom";
 import { Whiteboard } from './Components/Whiteboard';
+import Navbar from './Components/Navbar'
 
 const App = () => {
   return (
     <BrowserRouter>
     <div>
-      <h1>Coeus</h1>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Login />}/>
         <Route path="/home" element={<Home />}/>
