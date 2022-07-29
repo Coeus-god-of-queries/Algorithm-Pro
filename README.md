@@ -1,1 +1,2 @@
-# Algorithm Sky is a tool that combined white boarding and solving algorithms
+# Algorithm Sky 
+Algorithm Sky is a tool that combined white boarding and solving algorithms
