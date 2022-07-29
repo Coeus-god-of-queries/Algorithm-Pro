@@ -1,2 +1,2 @@
-# Algorithm Sky 
-Algorithm Sky is a tool that combined white boarding and solving algorithms
+# Algorithm Pro
+Algorithm Pro is a tool that combined white boarding and solving algorithms
